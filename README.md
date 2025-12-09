@@ -1,11 +1,11 @@
 # Epistemic-Uncertainty-Suppression-for-Robust-Spatiotemporal-Forecasting
 This repository contains the source code for the spatiotemporal surrogate model (CAST) developed for robust forecasting in aerospace systems. The code will be made publicly available to support further research and development in the field of digital airworthiness validation and spatiotemporal forecasting. The code will be made open-source upon acceptance. Contributions to the project are welcome.
-##System requirements
-###OS: Windows 11
+## System requirements
+### OS: Windows 11
 
-###Language: Python 3.8
+### Language: Python 3.8
 
-###Dependencies: 
+### Dependencies: 
 
 - Python: 3.8.20
 - PyTorch: torch==2.4.1+cu121
@@ -47,18 +47,18 @@ This repository contains the source code for the spatiotemporal surrogate model 
 - Experiment / tuning (optional, if you run the provided scripts):
   - nni==3.0
 
-###Tested on
+### Tested on
 Ubuntu Linux (GPU node) with NVIDIA RTX A6000 (48 GB VRAM), NVIDIA driver 570.133.07 (CUDA driver API 12.8), and PyTorch 2.4.1+cu121.
 
-###Hardware: 
+### Hardware: 
 GPU: NVIDIA RTX A6000 (48 GB VRAM)
 
 CPU/RAM: Standard x86_64 workstation/server (not required; any modern CPU is sufficient for the demo)
 
 Non-standard hardware: An NVIDIA GPU is recommended for training and for reproducing the main experiments.
 
-#Installation
-##System requirements
+# Installation
+## System requirements
 
 OS: Ubuntu Linux
 
@@ -84,6 +84,7 @@ pip install torch==2.4.1+cu121 torchvision==0.19.1+cu121 torchaudio==2.4.1+cu121
 
 # 4) Install remaining dependencies
 pip install -r requirements.txt
+```
 
-##Datasets
+## Datasets
 Public datasets used in this study are available as follows: the NY-Weather dataset from New York City Open Data (https://data.cityofnewyork.us/dataset/Hyperlocal-Temperature-Monitoring/qdq3-9eqn/about_data). Detailed metadata and variable descriptions are provided on the dataset landing page. The Exchange Rate dataset is available at (https://www.kaggle.com/datasets/wentixiaogege/time-series-dataset). The DMSP-Par dataset is available at (https://www.kaggle.com/datasets/saurabhshahane/dmsp-particle-precipitation-aiready-data). These datasets do not involve human subjects and do not require institutional approvals. The C919 flight-test dataset contains proprietary information and is not publicly available; it may be shared by the authors for bona fide academic research upon reasonable request to the corresponding author, subject to any required approvals and a data-use agreement. 
