@@ -97,7 +97,7 @@ pip install -r requirements.txt
 
 - First-time PyTorch wheel download may take longer depending on network speed.
 
-## Demo
+## Quick demo (one-command run)
 ### Run
 
 ```bash
