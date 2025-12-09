@@ -116,9 +116,13 @@ python run.py
 - After completion, outputs are saved to:
   - `outputs/demo_run/`
     
-> **Note:** This quick demo runs on a small dataset with minimal training to verify end-to-end reproducibility (install → run → metrics → saved outputs); demo metrics are not expected to match the paper’s full-scale results and may vary slightly across environments.  
-> The complete reproducible code/configs for **public datasets** are provided in `config/full/`.  
-> Code/configs that depend on **non-public datasets** are not released at this stage.
+> **Note on demo vs. full reproducibility (public datasets):**  
+> This quick demo uses a small demo dataset and a minimal number of training iterations for one-command execution. Its purpose is to validate end-to-end setup and **reproducible execution** (install → run → metrics → saved outputs), so the resulting metrics are **not intended to match** the paper’s full-scale results obtained with longer training and the full experimental configuration. Exact values may also vary slightly across environments (hardware, library versions, and random seeds).  
+>
+> **Full configuration for public datasets:** The complete training/evaluation configurations and scripts for reproducing experiments on **public datasets** are provided in `config/full/`.  
+>
+> **Non-public datasets:** Configurations and code paths that depend on **non-public/proprietary datasets** are not released at this stage. They will be made available subject to data-access permissions and/or via an anonymized snapshot provided through the editorial office if requested during peer review.
+
 
 
 
