@@ -139,7 +139,7 @@ These datasets do not involve human subjects and do not require institutional ap
 - It may be shared for bona fide academic research upon reasonable request to the corresponding author, subject to required approvals and a data-use agreement.
 > Demo data: the demo expects a small CSV placed under the repository data folder (see the path used in the demo config/code). You may replace it with the officially downloaded public data or your own formatted sample.
 
-## 6) Code availability, versioning, and license (for checklist compliance)
+## Code availability, versioning, and license (for checklist compliance)
 
 - **Repository:** GitHub (public): https://github.com/BinglinW/Epistemic-Uncertainty-Suppression-for-Robust-Spatiotemporal-Forecasting  
 - **Version used for peer review:** Please use the code at **commit** `<COMMIT_HASH>` (or the corresponding **tag** `<TAG_NAME>` if provided) to reproduce the results reported in this manuscript.  
