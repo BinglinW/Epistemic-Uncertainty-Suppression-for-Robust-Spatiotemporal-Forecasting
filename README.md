@@ -116,7 +116,8 @@ python run.py
 - After completion, outputs are saved to:
   - `outputs/demo_run/`
     
-> Because the demo uses a minimal number of iterations for one-command execution, its purpose is to confirm correct setup and reproducible execution. Exact metric values may vary slightly across environments (hardware, library versions, and random seeds).
+> > **Note:** This quick demo uses a small demo dataset and a minimal number of training iterations for one-command execution. Its purpose is to validate end-to-end setup and reproducible execution (install → run → metrics → saved outputs), so the resulting metrics are **not intended to match** the paper’s full-scale results obtained with longer training and the full experimental configuration. Exact values may also vary slightly across environments (hardware, library versions, and random seeds).
+
 
 ### Typical run time
 - Demo: typically finishes in minutes on a modern machine (GPU faster; CPU may take longer).
