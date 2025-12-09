@@ -72,7 +72,7 @@ During peer review, the goal of this repository is to enable **end-to-end execut
 
 ---
 
-# Installation
+## Installation
 
 
 ```bash
@@ -141,7 +141,7 @@ These datasets do not involve human subjects and do not require institutional ap
 
 ## Code availability, versioning, and license (for checklist compliance)
 
-- **Peer-review code access:** An anonymized code snapshot (ZIP) has been provided to the editorial office for the purpose of peer review.  
+- **Peer-review access:** A GitHub repository link has been provided to the editorial office for the purpose of peer review. To maintain double-anonymous review, the manuscript and reviewer-facing materials do not include identifying links; access can be mediated by the editorial office if needed.
 - **Version identifier (within this archive):** `review-snapshot-v1`  
 - **Reproducibility:** Please run the demo exactly as described in this README; outputs will be generated under `outputs/demo_run/`.  
 - **DOI:** Not yet available. Upon acceptance, we will archive the exact release used in the manuscript (e.g., via Zenodo) and provide the DOI in the final Code Availability statement.  
