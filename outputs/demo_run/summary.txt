@@ -1,0 +1,2 @@
+batches=5 time_sec=1.70
+mae=1.449333 mse=7.198200 rmse=2.672145 smape=50.239610
