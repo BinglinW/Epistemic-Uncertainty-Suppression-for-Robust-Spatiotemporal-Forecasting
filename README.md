@@ -92,5 +92,17 @@ pip install -r requirements.txt
 
 - First-time PyTorch wheel download may take longer depending on network speed.
 
+## Demo
+### Instructions to run on data
+```bash
+python run.py
+```
+
+### Expected output
+
+The demo prints a short training log and reports evaluation metrics on the provided small demo dataset, including MAE, RMSE, and sMAPE (together with the training loss). After the run finishes, the script confirms completion and saves outputs to `outputs/demo_run/`.
+
+Because the demo is configured with a very small number of iterations to enable one-command execution, the purpose is to verify that the full pipeline runs end-to-end and produces metrics quickly. Exact numeric values may vary slightly across environments (e.g., hardware, library versions, and random seeds).
+
 ## Datasets
 Public datasets used in this study are available as follows: the NY-Weather dataset from New York City Open Data (https://data.cityofnewyork.us/dataset/Hyperlocal-Temperature-Monitoring/qdq3-9eqn/about_data). Detailed metadata and variable descriptions are provided on the dataset landing page. The Exchange Rate dataset is available at (https://www.kaggle.com/datasets/wentixiaogege/time-series-dataset). The DMSP-Par dataset is available at (https://www.kaggle.com/datasets/saurabhshahane/dmsp-particle-precipitation-aiready-data). These datasets do not involve human subjects and do not require institutional approvals. The C919 flight-test dataset contains proprietary information and is not publicly available; it may be shared by the authors for bona fide academic research upon reasonable request to the corresponding author, subject to any required approvals and a data-use agreement. 
