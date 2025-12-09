@@ -141,10 +141,11 @@ These datasets do not involve human subjects and do not require institutional ap
 
 ## Code availability, versioning, and license (for checklist compliance)
 
-- **Repository:** GitHub (public): https://github.com/BinglinW/Epistemic-Uncertainty-Suppression-for-Robust-Spatiotemporal-Forecasting  
-- **Version used for peer review:** Please use the code at **commit** `<COMMIT_HASH>` (or the corresponding **tag** `<TAG_NAME>` if provided) to reproduce the results reported in this manuscript.  
-- **DOI:** A DOI is **not yet available**. Upon acceptance, we will archive a stable release of the exact code version used in the manuscript (e.g., via Zenodo) and provide the DOI in the final Code Availability statement.  
--  **License:** MIT License (see `LICENSE`).
+- **Peer-review code access:** An anonymized code snapshot (ZIP) has been provided to the editorial office for the purpose of peer review.  
+- **Version identifier (within this archive):** `review-snapshot-v1`  
+- **Reproducibility:** Please run the demo exactly as described in this README; outputs will be generated under `outputs/demo_run/`.  
+- **DOI:** Not yet available. Upon acceptance, we will archive the exact release used in the manuscript (e.g., via Zenodo) and provide the DOI in the final Code Availability statement.  
+- **License:** MIT License (see `LICENSE`).
 
 
 ## Contact
