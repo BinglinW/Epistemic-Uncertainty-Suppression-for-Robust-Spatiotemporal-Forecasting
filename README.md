@@ -1,9 +1,21 @@
 # Epistemic-Uncertainty-Suppression-for-Robust-Spatiotemporal-Forecasting
-This repository contains the source code for the spatiotemporal surrogate model (CAST) developed for robust forecasting in aerospace systems. The code will be made publicly available to support further research and development in the field of digital airworthiness validation and spatiotemporal forecasting. The code will be made open-source upon acceptance. Contributions to the project are welcome.
-## System requirements
-### OS: Windows 11
+This repository provides the reference implementation of **CAST**, a spatiotemporal surrogate model designed for robust forecasting under distribution shift in aerospace-relevant settings.
 
-### Language: Python 3.8
+During peer review, the goal of this repository is to enable **end-to-end execution** (install → run → obtain metrics + saved outputs) with a **small demo configuration**. Full-scale training used in the paper may require additional compute and/or non-public data (see “Datasets”).
+
+> **Double-anonymous review note:**  
+> If the journal requires double-anonymous review, please ensure that any manuscript-facing materials (PDF, supplementary files, and links shown to reviewers) use an anonymized archive/snapshot provided via the editorial office. The public repository can remain available, but the manuscript should avoid exposing identifying links during peer review.
+---
+
+## System requirements
+### OS
+- Tested on **Ubuntu Linux (GPU node)** and **Windows 11**.
+
+  
+### Language
+- Python **3.8.20**
+  
+
 
 ### Dependencies: 
 
@@ -47,28 +59,21 @@ This repository contains the source code for the spatiotemporal surrogate model 
 - Experiment / tuning (optional, if you run the provided scripts):
   - nni==3.0
 
-### Tested on:
-Ubuntu Linux (GPU node) with NVIDIA RTX A6000 (48 GB VRAM), NVIDIA driver 570.133.07 (CUDA driver API 12.8), and PyTorch 2.4.1+cu121.
+    
+### Tested environment (reference)
+- Ubuntu Linux (GPU node), NVIDIA RTX A6000 (48 GB VRAM)  
+- NVIDIA driver 570.133.07 (CUDA driver API 12.8)  
+- PyTorch 2.4.1+cu121 (CUDA 12.1 build)
 
 ### Hardware: 
-GPU: NVIDIA RTX A6000 (48 GB VRAM)
+- GPU: NVIDIA RTX A6000 (48 GB VRAM)
+- CPU/RAM: Standard x86_64 workstation/server (not required; any modern CPU is sufficient for the demo)
+- Non-standard hardware: An NVIDIA GPU is recommended for training and for reproducing the main experiments.
 
-CPU/RAM: Standard x86_64 workstation/server (not required; any modern CPU is sufficient for the demo)
-
-Non-standard hardware: An NVIDIA GPU is recommended for training and for reproducing the main experiments.
+---
 
 # Installation
-## System requirements
 
-OS: Ubuntu Linux
-
-Python: 3.8.20
-
-GPU (recommended): NVIDIA RTX A6000 (48 GB VRAM)
-
-Driver: NVIDIA 570.133.07 (CUDA driver API 12.8)
-
-PyTorch: 2.4.1+cu121 (CUDA 12.1 build)
 
 ```bash
 # 1) Create and activate environment
@@ -93,16 +98,47 @@ pip install -r requirements.txt
 - First-time PyTorch wheel download may take longer depending on network speed.
 
 ## Demo
-### Instructions to run on data
+### Run
+
 ```bash
 python run.py
 ```
 
+### What the demo does
+- Runs a **short training loop** (small number of iterations) on a **small demo dataset/config** to verify the pipeline end-to-end.
+
+- Reports a compact training log and evaluation metrics.
+
 ### Expected output
+- Console prints:
+  - a short training log (loss)
+  - evaluation metrics: **MAE, RMSE, sMAPE**
+- After completion, outputs are saved to:
+  - `outputs/demo_run/`
+    
+> Because the demo uses a minimal number of iterations for one-command execution, its purpose is to confirm correct setup and reproducible execution. Exact metric values may vary slightly across environments (hardware, library versions, and random seeds).
 
-The demo prints a short training log and reports evaluation metrics on the provided small demo dataset, including MAE, RMSE, and sMAPE (together with the training loss). After the run finishes, the script confirms completion and saves outputs to `outputs/demo_run/`.
+### Typical run time
+- Demo: typically finishes in minutes on a modern machine (GPU faster; CPU may take longer).
 
-Because the demo is configured with a very small number of iterations to enable one-command execution, the purpose is to verify that the full pipeline runs end-to-end and produces metrics quickly. Exact numeric values may vary slightly across environments (e.g., hardware, library versions, and random seeds).
+## Reproducibility
+
+- Random seeds are fixed where applicable (see code for `setup_seed(...)`).
+- The demo is configured to run deterministically as much as possible given PyTorch/CUDA behavior.
+- All outputs (metrics logs and artifacts) are written under `outputs/demo_run/`.
 
 ## Datasets
-Public datasets used in this study are available as follows: the NY-Weather dataset from New York City Open Data (https://data.cityofnewyork.us/dataset/Hyperlocal-Temperature-Monitoring/qdq3-9eqn/about_data). Detailed metadata and variable descriptions are provided on the dataset landing page. The Exchange Rate dataset is available at (https://www.kaggle.com/datasets/wentixiaogege/time-series-dataset). The DMSP-Par dataset is available at (https://www.kaggle.com/datasets/saurabhshahane/dmsp-particle-precipitation-aiready-data). These datasets do not involve human subjects and do not require institutional approvals. The C919 flight-test dataset contains proprietary information and is not publicly available; it may be shared by the authors for bona fide academic research upon reasonable request to the corresponding author, subject to any required approvals and a data-use agreement. 
+### Public datasets
+Public datasets used in this study are available from:
+- NY-Weather (NYC Open Data): https://data.cityofnewyork.us/dataset/Hyperlocal-Temperature-Monitoring/qdq3-9eqn/about_data
+- Exchange Rate (Kaggle): https://www.kaggle.com/datasets/wentixiaogege/time-series-dataset
+- DMSP-Par (Kaggle): https://www.kaggle.com/datasets/saurabhshahane/dmsp-particle-precipitation-aiready-data
+These datasets do not involve human subjects and do not require institutional approvals.
+### Proprietary dataset
+- The C919 flight-test dataset contains proprietary information and is not publicly available.
+- It may be shared for bona fide academic research upon reasonable request to the corresponding author, subject to required approvals and a data-use agreement.
+> Demo data: the demo expects a small CSV placed under the repository data folder (see the path used in the demo config/code). You may replace it with the officially downloaded public data or your own formatted sample.
+
+## Contact
+
+For questions during peer review, please use the journal submission system or editorial correspondence channel.
